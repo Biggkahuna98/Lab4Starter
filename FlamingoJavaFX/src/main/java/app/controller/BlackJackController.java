@@ -67,9 +67,27 @@ public class BlackJackController implements Initializable {
 			{
 			case 0:
 				lblBottomName.setText(p.getPlayerName());
+				if (FlamingoGame.getAppPlayer().getiPlayerPosition() == 0)
+				{
+					btnBottom.setText("Leave");
+					btnTop.setVisible(false);
+				}
+				else
+				{
+					btnBottom.setVisible(false);
+				}
 				break;
 			case 2:
 				lblTopName.setText(p.getPlayerName());
+				if (FlamingoGame.getAppPlayer().getiPlayerPosition() == 2)
+				{
+					btnTop.setText("Leave");
+					btnBottom.setVisible(false);
+				}
+				else
+				{
+					btnTop.setVisible(false);
+				}
 				break;
 			}
 		}
