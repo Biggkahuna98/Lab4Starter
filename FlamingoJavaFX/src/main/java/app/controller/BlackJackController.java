@@ -67,7 +67,7 @@ public class BlackJackController implements Initializable {
 			{
 			case 0:
 				lblBottomName.setText(p.getPlayerName());
-				if (FlamingoGame.getAppPlayer().getiPlayerPosition() == 0)
+				if (FlamingoGame.getAppPlayer().getiPlayerPosition() == p.getiPlayerPosition())
 				{
 					btnBottom.setText("Leave");
 					btnTop.setVisible(false);
@@ -79,7 +79,7 @@ public class BlackJackController implements Initializable {
 				break;
 			case 2:
 				lblTopName.setText(p.getPlayerName());
-				if (FlamingoGame.getAppPlayer().getiPlayerPosition() == 2)
+				if (FlamingoGame.getAppPlayer().getiPlayerPosition() == p.getiPlayerPosition())
 				{
 					btnTop.setText("Leave");
 					btnBottom.setVisible(false);
