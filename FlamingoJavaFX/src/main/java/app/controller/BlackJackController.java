@@ -67,7 +67,15 @@ public class BlackJackController implements Initializable {
 			{
 			case 0:
 				lblBottomName.setText(p.getPlayerName());
-				if (FlamingoGame.getAppPlayer().getiPlayerPosition() == p.getiPlayerPosition())
+				
+				if(btnBottom.getText().equals("Leave"))
+				{
+					btnTop.setText("Sit");
+					btnTop.setVisible(true);
+					lblTopName.setText("Label");
+				}
+				
+				else if (FlamingoGame.getAppPlayer().getiPlayerPosition() == p.getiPlayerPosition())
 				{
 					btnBottom.setText("Leave");
 					btnTop.setVisible(false);
@@ -76,10 +84,20 @@ public class BlackJackController implements Initializable {
 				{
 					btnBottom.setVisible(false);
 				}
+				
+				
 				break;
 			case 2:
 				lblTopName.setText(p.getPlayerName());
-				if (FlamingoGame.getAppPlayer().getiPlayerPosition() == p.getiPlayerPosition())
+				
+				if(btnTop.getText().equals("Leave"))
+				{				
+					btnBottom.setText("Sit");
+					btnBottom.setVisible(true);
+					lblBottomName.setText("Label");
+				}
+				
+				else if (FlamingoGame.getAppPlayer().getiPlayerPosition() == p.getiPlayerPosition())
 				{
 					btnTop.setText("Leave");
 					btnBottom.setVisible(false);
@@ -88,6 +106,8 @@ public class BlackJackController implements Initializable {
 				{
 					btnTop.setVisible(false);
 				}
+				
+				
 				break;
 			}
 		}

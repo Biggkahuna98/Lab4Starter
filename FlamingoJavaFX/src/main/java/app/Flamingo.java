@@ -180,7 +180,8 @@ public class Flamingo extends Application {
 				if (message instanceof String) {
 					System.out.println("Message Received " + message);
 				} else if (message instanceof Table) {
-					BJC.HandleTableState((Table) message);
+					BJC.HandleTableState((Table) message)
+					;
 				} else if (message instanceof GamePlay) {
 
 				}
